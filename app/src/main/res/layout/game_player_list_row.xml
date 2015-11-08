@@ -29,7 +29,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/remove_player"
             android:scaleType="centerInside"
-            android:src="@drawable/purple_delete_button" />
+            android:src="@mipmap/card_2d" />
     </FrameLayout>
 
 </TableRow>
