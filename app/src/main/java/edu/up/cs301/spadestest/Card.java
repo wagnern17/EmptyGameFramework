@@ -24,8 +24,12 @@ public class Card {
      * @param s string that holds the suit of a Card object
      */
     public Card(int r, String s) {
-        rank = r;
-        suit = s;
+        if(rankCheck(r)){
+            rank = r;
+        }
+        if(suitCheck(s)){
+            suit = s;
+        }
     }
 
     /**
@@ -73,10 +77,10 @@ public class Card {
     }
 
     public boolean suitCheck(String s){
-        if(s != DIAMONDS ||
-                s != HEARTS ||
-                s != SPADES ||
-                s != CLUBS){
+        if(!s.equals(DIAMONDS) ||
+                !s.equals(HEARTS) ||
+                !s.equals(CLUBS) ||
+                !s.equals(SPADES)){
             Log.d("SUIT ERROR", "Suit invalid: "+ s);
             return false;
         }
