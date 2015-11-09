@@ -192,7 +192,7 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 	/**
 	 * Sends a 'state' object to the game's thread.
 	 * 
-	 * @param into
+	 * @param info
 	 * 		the information object to send
 	 */
 	public void sendInfo(GameInfo info) {
@@ -221,12 +221,12 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 	private class MyRunnable implements Runnable {
 		// the message to send to the player
 		private GameInfo myInfo;
-		
+
 		// constructor
 		public MyRunnable(GameInfo info) {
 			myInfo = info;
 		}
-		
+
 		// the run method, which is run in the main GUI thread
 		public void run() {
 			
